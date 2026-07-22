@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martim A.S Photography | Portfólio</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Cabeçalho e Logo */
+        header {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+            border-radius: 10px;
+            header {
+    position: fixed;   /* Fica sempre no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+.logo {
+    width: 80px;      /* Altera o tamanho aqui */
+    height: auto;
+    display: block;
+}
+        }
+
+        /* Descrição / Bio */
+        .bio {
+            max-width: 600px;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        /* Botão de Contacto */
+        .btn-contact {
+            background-color: #c5a880;
+            color: #121212;
+            padding: 12px 28px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: background 0.3s ease;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+
+        .btn-contact:hover {
+            background-color: #e0c39a;
+        }
+
+        /* Menu de Categorias */
+        .category-menu {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 2px solid #c5a880;
+            color: #c5a880;
+            padding: 10px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            background-color: #c5a880;
+            color: #121212;
+        }
+
+        /* Layout Masonry (Estilo Pinterest - Sem cortes) */
+        .gallery-section {
+            display: none;
+            width: 100%;
+            max-width: 1100px;
+            column-count: 3; /* 3 colunas em ecrãs grandes */
+            column-gap: 20px;
+        }
+
+        .gallery-section.active {
+            display: block;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto; /* Mantém a proporção real da foto */
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Responsividade para telemóveis */
+        @media (max-width: 768px) {
+            .gallery-section {
+                column-count: 2; /* 2 colunas em tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-section {
+                column-count: 1; /* 1 coluna em telemóveis */
+            }
+        }
+
+        /* Rodapé */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9rem;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="c:\Users\marti\Desktop\meu site\logomeu.jpg.png" alt="Martim A.S Photography" class="logo">
+    </header>
+
+    <div class="bio">
+        <p>Bem-vindo ao meu portfólio oficial. Explora os meus trabalhos divididos por categoria.</p>
+    </div>
+
+    <a href="https://wa.me/351926965437" class="btn-contact" target="_blank">Agendar Sessão / Contacto</a>
+
+    <div class="category-menu">
+        <button class="tab-btn active" onclick="openCategory('retratos', this)">Retratos</button>
+        <button class="tab-btn" onclick="openCategory('urbano', this)">Paisagens & Urbano</button>
+    </div>
+
+    <div id="retratos" class="gallery-section active">
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto1.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto2.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto3.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto4.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto5.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto6.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto7.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto9.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto10.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto11.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto12.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto13.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto15.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto16.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto17.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto18.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosretratosfoto19.jpg.jpg"></div>
+    </div>
+
+    <div id="urbano" class="gallery-section">
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto1.jpg.png"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto3.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto7.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto8.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto9.jpg.png"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto10.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto11.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto12.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto13.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto16.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto19.jpg.jpg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto23.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto33.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto34.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto35.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto36.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto37.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto38.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto39.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto40.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto44.jpg.jpeg"></div>
+        <div class="gallery-item"><img src="c:\Users\marti\Desktop\meu site\fotosurbanofoto45.jpg.jpeg"></div>
+    </div>
+
+    <footer>
+        <p>&copy; Martim A.S Photography. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function openCategory(categoryName, element) {
+            const sections = document.querySelectorAll('.gallery-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(categoryName).classList.add('active');
+            element.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
